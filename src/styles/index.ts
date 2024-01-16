@@ -1,4 +1,4 @@
-import styled, {createGlobalStyle} from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components'
 
 const EstiloGlobal = createGlobalStyle`
 *{
@@ -12,8 +12,8 @@ const EstiloGlobal = createGlobalStyle`
 `
 
 export const Container = styled.div`
-max-width: 736px;
-margin: 0 auto;
+  max-width: 736px;
+  margin: 0 auto;
 `
 
 export default EstiloGlobal

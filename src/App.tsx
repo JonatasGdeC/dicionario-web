@@ -1,16 +1,16 @@
-import React from 'react'
 import EstiloGlobal, { Container } from './styles'
 import Header from './containers/Header'
+import Body from './containers/Body'
 
 function App() {
-  return(
+  return (
     <>
       <EstiloGlobal />
       <Container>
         <Header />
+        <Body />
       </Container>
     </>
-
   )
 }
 
