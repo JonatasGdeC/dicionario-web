@@ -1,7 +1,19 @@
+import React, { useState } from 'react';
+
 import * as S from './styles'
 import ButtonTema from '../../components/ButtonTema'
 
-const Header = () => {
+interface HeaderProps {
+  onSearch: (word: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  const handleSearch = () => {
+    onSearch(searchTerm);
+  };
+
   const imgIcon = require('../../images/icon.png')
   const imgButtonSearch = require('../../images/button-search.png')
 
@@ -19,8 +31,8 @@ const Header = () => {
         </S.SelectTemas>
       </S.HeaderSuperior>
       <S.InputSearch>
-        <input type="text" />
-        <button type="button"><img src={imgButtonSearch} alt="Search" /></button>
+        <input type="text" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)} />
+        <button type="button" onClick={handleSearch}><img src={imgButtonSearch} alt="Search" /></button>
       </S.InputSearch>
     </S.Header>
   )

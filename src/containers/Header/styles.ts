@@ -22,14 +22,20 @@ export const SelectTemas = styled.div`
 export const InputSearch = styled.div`
   display: flex;
   align-items: center;
-  padding: 20px 24px;
+  padding: 0 24px;
   justify-content: space-between;
+  border: 1px solid transparent;
   border-radius: 16px;
   background-color: #f4f4f4;
+
+  &:hover{
+    border-color: #A445ED
+  }
 
   input{
     width: 100%;
     font-size: 20px;
+    padding: 20px 0;
     font-weight: bold;
     background-color: #f4f4f4;
     border: none;
